@@ -22,16 +22,11 @@ import java.util.Calendar;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class BootReceiver extends BroadcastReceiver {
-    private static SetAlarms setAlarms;
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
+
     @Override
     public void onReceive(Context context, Intent intent) {
-
-        Toast.makeText(context, "AlarmMVVM: BootCompleted", Toast.LENGTH_SHORT).show();
-        setAlarms=new SetAlarms(context);
        try{
-
            Intent serviceIntent=new Intent(context,AlarmInitService.class);
            PendingIntent pendingIntent=PendingIntent.getBroadcast(context,0,serviceIntent,0);
            AlarmManager alarmManager=(AlarmManager) context.getSystemService(Context.ALARM_SERVICE);

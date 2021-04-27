@@ -21,17 +21,11 @@ public class AlarmNotifReceiver extends BroadcastReceiver {
     private String msg;
     @Override
     public void onReceive(Context context, Intent intent) {
-        Toast.makeText(context, "In On Receive", Toast.LENGTH_SHORT).show();
-
        if(intent!=null)
           msg=intent.getStringExtra("HOUR");
-
        displayNotication(context);
-
     }
-
     public void displayNotication(Context context){
-
         NotificationCompat.Builder builder=new NotificationCompat.Builder(context,CHANNEL_ID)
                 .setContentTitle("Tring Tring, Wake Up")
                 .setContentText("Wake up, You are made to show, Not so soo😴😴😴")

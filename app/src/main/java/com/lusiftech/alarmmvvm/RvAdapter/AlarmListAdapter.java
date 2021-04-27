@@ -99,16 +99,16 @@ public class AlarmListAdapter extends ListAdapter<Alarm, AlarmListAdapter.AlarmV
                });
     }
 
-        private void setSwitchChecked(TextView tv_time,TextView tv_AmPm,Alarm alarm){
+    private void setSwitchChecked(TextView tv_time,TextView tv_AmPm,Alarm alarm){
 
-            if(alarm.isChecked()){
-                tv_AmPm.setTextColor(tv_AmPm.getResources().getColor(R.color.teal_200));
-                tv_time.setTextColor(tv_time.getResources().getColor(R.color.teal_200));
-            }else{
-                tv_AmPm.setTextColor(tv_AmPm.getResources().getColor(R.color.teal_700));
-                tv_time.setTextColor(tv_time.getResources().getColor(R.color.teal_700));
-            }
+        if(alarm.isChecked()){
+            tv_AmPm.setTextColor(tv_AmPm.getResources().getColor(R.color.teal_200));
+            tv_time.setTextColor(tv_time.getResources().getColor(R.color.teal_200));
+        }else{
+            tv_AmPm.setTextColor(tv_AmPm.getResources().getColor(R.color.teal_700));
+            tv_time.setTextColor(tv_time.getResources().getColor(R.color.teal_700));
         }
+    }
 
     private void setDaysView(LinearLayout layout,Alarm alarm){
         boolean days[]=new boolean[]{alarm.getSun(),alarm.getMon(),alarm.getTues(),alarm.getWed(),alarm.getThurs(),alarm.getFri(),alarm.getSat()};

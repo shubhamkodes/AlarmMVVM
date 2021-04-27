@@ -33,7 +33,6 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        //Toast.makeText(getContext(),hourOfDay+":"+minute,Toast.LENGTH_LONG).show();
         Alarm alarm=new Alarm();
         alarm.setMinute(minute);
         alarm.setHourOfDay(hourOfDay);

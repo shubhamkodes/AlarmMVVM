@@ -50,19 +50,12 @@ public class AlarmInitService extends BroadcastReceiver {
                            Alarm alarm=alarmList.get(i);
                            setAlarms.setAlarm(alarm);
                            Log.v("CODE_ME","Alarm set for"+alarm.getHourOfDay()+":"+alarm.getMinute());
-
                        }
                    }
                }
-
            }catch (Exception e){
                Log.v("CODE_ME","In Executors :"+e.getMessage().toString());
-
            }
-
         });
-
-
-
     }
 }
