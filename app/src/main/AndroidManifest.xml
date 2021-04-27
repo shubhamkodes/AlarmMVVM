@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lusiftech.alarmmvvm">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:fullBackupContent="true"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AlarmMVVM"
+        android:allowBackup="true">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".Receivers.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.REBOOT" />
+                <action android:name="alarm.mvvm.notify"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".Receivers.AlarmNotifReceiver"
+            android:permission="android.permission.VIBRATE"
+            android:enabled="true"
+             android:exported="true">
+
+        </receiver>
+        <receiver android:name=".Receivers.AlarmInitService"
+            android:enabled="true"
+            android:exported="true"
+            />
+
+    </application>
+</manifest>

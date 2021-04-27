@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AlarmMVVM</string>
+    <string name="am">AM</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="s">S</string>
+    <string name="saturday">S</string>
+    <string name="friday">F</string>
+    <string name="thursday">T</string>
+    <string name="wednesday">W</string>
+    <string name="tuesday">T</string>
+    <string name="monday">M</string>
+</resources>
