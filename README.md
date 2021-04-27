@@ -1,6 +1,9 @@
+
+
 # AlarmMVVM- Basic Alarm App based on MVVM architecture.
 
-#Functionality:-
+#Functionality
+
     * Interactive and Responsive UI
     * Room Database Implementation
     * Days Selection
